@@ -34,7 +34,7 @@ git clone https://github.com/esrsound/tflite.git
 
 ### 2. Install TensorFlow Lite
 
-**MacOS Install Bazelisk
+**MacOS Install Bazelisk**
 ```bash
 brew install bazelisk
 ```
