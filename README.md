@@ -252,7 +252,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Support
 
-- 🐛 [Issue Tracker](https://github.com/yourusername/tflite/issues)
-- 💬 [Discussions](https://github.com/yourusername/tflite/discussions)
+- 🐛 [Issue Tracker](https://github.com/esrsound/tflite/issues)
+- 💬 [Discussions](https://github.com/esrsound/tflite/discussions)
 
 ***
