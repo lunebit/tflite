@@ -1,17 +1,18 @@
 # TensorFlow Lite Bindings for V
 
-TensorFlow Lite bindings for the V programming language with type-safe API and zero-copy tensor operations.
+TensorFlow Lite bindings for the V programming language with type-safe API and zero-copy tensor operations. 
+All library functions are well documented.
 
 ## Features
 
-- ✨ **Type-safe API** with compile-time type checking
-- 🚀 **Zero-copy tensor operations** for maximum performance
-- 🎯 **High-level ModelManager** for easy inference
-- 🔧 **Low-level API** for advanced use cases
-- 🏃 **XNNPACK delegate** support for optimized CPU inference
-- 🌍 **Cross-platform** (macOS, Linux, Windows)
-- 📝 **Comprehensive documentation** with examples
-- 🛡️ **Memory-safe** with RAII pattern and proper resource management
+-  **Type-safe API** with compile-time type checking
+-  **Zero-copy tensor operations** for maximum performance
+-  **High-level ModelManager** for easy inference
+-  **Low-level API** for advanced use cases
+-  **XNNPACK delegate** support for optimized CPU inference
+-  **Cross-platform** (macOS, Linux, Windows)
+-  **Comprehensive documentation** with examples
+-  **Memory-safe** with RAII pattern and proper resource management
 
 ## Requirements
 
@@ -27,7 +28,7 @@ TensorFlow Lite bindings for the V programming language with type-safe API and z
 v install https://github.com/esrsound/tflite
 ```
 
-Or clone directly:
+Or clone directly (better) inside your project:
 ```bash
 git clone https://github.com/esrsound/tflite.git
 ```
@@ -202,26 +203,16 @@ manager.free()  // Safe - data still valid
    manager.load_model('model.tflite', 'model', 4, true)!  // xnnpack: true
    ```
 
-2. **Use appropriate number of threads**:
-   ```v
-   num_threads := runtime.nr_cpus()  // or set manually
-   ```
-
-3. **Reuse ModelManager** for multiple inferences:
-   ```v
-   for image in images {
-       manager.set_input(0, image)!
-       result := manager.run_inference()!
-       // process result
-   }
-   ```
-
-4. **Use zero-copy for hot paths** (if you know what you're doing):
+2. **Use zero-copy for hot paths** (if you know what you're doing):
    ```v
    output := result.get_output[f32](0)!  // No memory copy
    process(output)
    // Don't call manager.free() while using output!
    ```
+3. **Set multi-thread option:**
+4. ```v
+    manager.set_num_threads(4)
+    ```
 
 ## Error Handling
 
