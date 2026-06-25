@@ -61,7 +61,7 @@ bazel build -c opt \
 cp bazel-bin/tensorflow/lite/c/libtensorflowlite_c.dylib /yourpath/tflite/lib/mac
 ```
 
-Notice: For MacOS users you can download precompiled tensorflow lite library from here: https://github.com/esrsound/assets/tflite
+Notice: For MacOS users you can download precompiled tensorflow lite library (m silicon) from here: [https://github.com/esrsound/assets/tflite](https://github.com/esrsound/tflite/blob/main/lib/mac/libtensorflowlite_c.dylib)
 
 
 ## Quick Start
