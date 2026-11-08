@@ -25,12 +25,12 @@ All library functions are well documented.
 ### 1. Install the module
 
 ```bash
-v install https://github.com/esrsound/tflite
+v install https://github.com/lunebit/tflite
 ```
 
 Or clone directly (better) inside your project:
 ```bash
-git clone https://github.com/esrsound/tflite.git
+git clone https://github.com/lunebit/tflite.git
 ```
 
 ### 2. Install TensorFlow Lite
